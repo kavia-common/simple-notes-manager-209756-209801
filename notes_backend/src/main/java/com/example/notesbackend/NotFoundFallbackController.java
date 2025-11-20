@@ -30,8 +30,8 @@ public class NotFoundFallbackController {
 
         // Allowlist: skip handling for these (let real handlers/static serve them)
         if (startsWithAny(path,
-                "/api/", "/actuator", "/health", "/h2-console",
-                "/swagger-ui", "/swagger-ui.html", "/openapi.json")) {
+                "/api/", "/actuator", "/actuator/health", "/actuator/health/readiness", "/health", "/h2-console",
+                "/swagger-ui", "/openapi.json")) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
         }
 

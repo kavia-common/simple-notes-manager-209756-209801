@@ -38,19 +38,7 @@ public class HelloController {
         return rv;
     }
 
-    @GetMapping("/swagger-ui.html")
-    @Operation(summary = "Swagger UI legacy path", description = "Redirects legacy /swagger-ui.html to /swagger-ui/index.html for springdoc 2.x")
-    public RedirectView legacySwaggerUi(HttpServletRequest request) {
-        String target = UriComponentsBuilder
-                .fromHttpRequest(new ServletServerHttpRequest(request))
-                .replacePath("/swagger-ui/index.html")
-                .replaceQuery(null)
-                .build()
-                .toUriString();
-        RedirectView rv = new RedirectView(target);
-        rv.setHttp10Compatible(false);
-        return rv;
-    }
+
 
     @GetMapping("/health")
     @Operation(summary = "Health check", description = "Returns application health status")
