@@ -43,3 +43,12 @@ tasks.named('check') {
 tasks.named('test') {
 	useJUnitPlatform()
 }
+
+tasks.named('bootJar') {
+	manifest {
+		attributes(
+				'Main-Class': 'org.springframework.boot.loader.launch.JarLauncher',
+				'Start-Class': 'com.example.notesbackend.NotesBackendApplication'
+		)
+	}
+}

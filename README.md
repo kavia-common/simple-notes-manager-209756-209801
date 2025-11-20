@@ -5,6 +5,7 @@ Notes Backend (Spring Boot) - CRUD API for Notes
 Run:
 - Gradle wrapper is included. In the container environment it will already be started, but locally you can run:
   ./gradlew bootRun
+- Main class: com.example.notesbackend.NotesBackendApplication
 
 H2 Dev DB:
 - Uses in-memory H2 database by default. H2 console available at /h2-console

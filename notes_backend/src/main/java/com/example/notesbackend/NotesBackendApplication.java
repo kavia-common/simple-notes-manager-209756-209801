@@ -7,9 +7,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * Application entry point.
  */
 @SpringBootApplication
-public class NotesbackendApplication {
+public class NotesBackendApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(NotesbackendApplication.class, args);
+		SpringApplication.run(NotesBackendApplication.class, args);
 	}
 }
