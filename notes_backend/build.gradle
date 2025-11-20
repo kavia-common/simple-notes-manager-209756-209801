@@ -2,6 +2,7 @@ plugins {
 	id 'java'
 	id 'org.springframework.boot' version '3.4.8'
 	id 'io.spring.dependency-management' version '1.1.7'
+	id 'checkstyle'
 }
 
 group = 'com.example'
@@ -26,6 +27,17 @@ dependencies {
 	runtimeOnly 'com.h2database:h2'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+checkstyle {
+	toolVersion = '10.12.4'
+	configFile = file('config/checkstyle/checkstyle.xml')
+	// Do not fail the build on violations in CI bootstrap; report instead.
+	ignoreFailures = true
+}
+
+tasks.named('check') {
+	dependsOn 'checkstyleMain', 'checkstyleTest'
 }
 
 tasks.named('test') {
