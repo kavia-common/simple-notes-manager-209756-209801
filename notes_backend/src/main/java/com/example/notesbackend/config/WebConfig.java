@@ -40,6 +40,7 @@ public class WebConfig {
                         .version("0.1.0")
                         .description("REST API for managing notes")
                         .contact(new Contact().name("Notes Backend").email("noreply@example.com")))
-                .externalDocs(new ExternalDocumentation().description("Swagger UI").url("/swagger-ui.html"));
+                // Use springdoc 2.x default Swagger UI path
+                .externalDocs(new ExternalDocumentation().description("Swagger UI").url("/swagger-ui/index.html"));
     }
 }

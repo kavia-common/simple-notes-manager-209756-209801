@@ -6,7 +6,7 @@
   - GET /actuator/health/readiness (probes enabled)
 - API:
   - GET /api/notes
-- Swagger UI:
+- Swagger UI (springdoc 2.x default):
   - /swagger-ui/index.html
 - H2 Console:
   - /h2-console

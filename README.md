@@ -11,9 +11,8 @@ H2 Dev DB:
 - Uses in-memory H2 database by default. H2 console available at /h2-console
 
 Swagger/OpenAPI:
-- Swagger UI: /swagger-ui.html
+- Swagger UI: /swagger-ui/index.html
 - OpenAPI JSON: /openapi.json
-- Docs redirect: /docs
 
 Health:
 - GET /health -> OK
